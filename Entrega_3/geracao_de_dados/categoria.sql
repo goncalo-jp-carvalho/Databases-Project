@@ -1,0 +1,12 @@
+INSERT INTO Categoria VALUES ("Ovos");
+INSERT INTO Categoria VALUES ("Corn Flakes");
+INSERT INTO Categoria VALUES ("Pizzas");
+INSERT INTO Categoria VALUES ("Carne Congelada");
+INSERT INTO Categoria VALUES ("Queijos");
+INSERT INTO Categoria VALUES ("Leite");
+INSERT INTO Categoria VALUES ("Flocos e Papas de Aveia");
+INSERT INTO Categoria VALUES ("Barras de Cereais");
+INSERT INTO Categoria VALUES ("Gelados");
+INSERT INTO Categoria VALUES ("Cereais e Barras");
+INSERT INTO Categoria VALUES ("Congelados");
+INSERT INTO Categoria VALUES ("Laticinios e Ovos");

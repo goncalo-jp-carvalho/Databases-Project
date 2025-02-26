@@ -1,0 +1,29 @@
+5a) Inserir categoria simples: INSERT INTO Categoria_simples VALUES(%s);
+    INSERIR sub-categoria: INSERT INTO Tem_outra VALUES(%s1, %s2);
+    Remover categoria/sub_categoria: RE
+    Remover sub-categoria: DELETE FROM Tem_outra WHERE Tem_outra.categoria = %s;
+
+ b) INSERIR Retalhista: INSERT INTO Retalhista VALUES(%s1, %s2);
+    REMOVER Retalhista: DELETE FROM Retalhista WHERE Retalhista.tin = %s;
+
+ c) SELECT info.nome categoria, SUM(info.unidades) total_unidades
+        FROM ( SELECT *
+            FROM Evento_reposicao
+            NATURAL JOIN Prateleira) As info
+            WHERE info.num_serie = %d AND info.fabricante = %s
+            GROUP BY
+            categoria;
+
+ d) WITH RECURSIVE sub_categorias AS (
+        SELECT T1.categoria
+            FROM Tem_outra T1
+            WHERE T1.super_categoria = %s
+
+        UNION ALL
+
+        SELECT T2.categoria
+            FROM Tem_outra T2
+        JOIN sub_categorias sb ON sb.categoria = T2.super_categoria
+    ) SELECT * FROM sub_categorias;
+
+

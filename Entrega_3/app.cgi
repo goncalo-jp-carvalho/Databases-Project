@@ -10,7 +10,7 @@ import psycopg2.extras
 DB_HOST = "db.tecnico.ulisboa.pt"
 DB_USER = "ist199227"
 DB_DATABASE = DB_USER
-DB_PASSWORD = "blqc9488"
+DB_PASSWORD = ""
 DB_CONNECTION_STRING = "host=%s dbname=%s user=%s password=%s" % (
     DB_HOST,
     DB_DATABASE,
